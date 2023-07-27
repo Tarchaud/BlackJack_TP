@@ -1,0 +1,646 @@
+\hypertarget{BlackJack_8h}{}\doxysection{src/\+Black\+Jack.h File Reference}
+\label{BlackJack_8h}\index{src/BlackJack.h@{src/BlackJack.h}}
+
+
+Prototypes des fonction pour le black\+Jack.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for Black\+Jack.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BlackJack_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{BlackJack_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsCarte}{s\+Carte}}
+\item 
+struct \mbox{\hyperlink{structJoueur}{Joueur}}
+\item 
+struct \mbox{\hyperlink{structCroupier}{Croupier}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{BlackJack_8h_a093eda26f46d48ba6b7cfdc988c5bb9f}{e\+Couleur}} \{ \mbox{\hyperlink{BlackJack_8h_a093eda26f46d48ba6b7cfdc988c5bb9fa6cf34ba95f90ef6ff0cb4b7788b099f6}{Carreau}}, 
+\mbox{\hyperlink{BlackJack_8h_a093eda26f46d48ba6b7cfdc988c5bb9fadf14e5391bb2eba0f2b08317cc474d63}{Coeur}}, 
+\mbox{\hyperlink{BlackJack_8h_a093eda26f46d48ba6b7cfdc988c5bb9fa54708678db4f087fe8241fbddd258cb9}{Pique}}, 
+\mbox{\hyperlink{BlackJack_8h_a093eda26f46d48ba6b7cfdc988c5bb9fa109cc0d64e86ea9eef73f11a55c63a6d}{Trefle}}
+ \}
+\item 
+enum \mbox{\hyperlink{BlackJack_8h_a08389a9632343c4027b474f3ce4d8080}{a\+Gagner}} \{ \mbox{\hyperlink{BlackJack_8h_a08389a9632343c4027b474f3ce4d8080adf399991a2ded168c0cfa427179aa14a}{perdu}}, 
+\mbox{\hyperlink{BlackJack_8h_a08389a9632343c4027b474f3ce4d8080aa533d4f9d075573c486ca56d89d961b2}{egalite}}, 
+\mbox{\hyperlink{BlackJack_8h_a08389a9632343c4027b474f3ce4d8080a52471e9ee5ed3dd852df5aab9d751193}{gagne}}, 
+\mbox{\hyperlink{BlackJack_8h_a08389a9632343c4027b474f3ce4d8080a67cc6ef6254e22c66343c696db1d090d}{black\+Jack}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{BlackJack_8h_af9a90881db88ae4d7ba2766bb5b54c64}{Init\+Paquet}} (struct \mbox{\hyperlink{structsCarte}{s\+Carte}} $\ast$Paquet)
+\begin{DoxyCompactList}\small\item\em Crée le paquet de cartes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{BlackJack_8h_a1fad917fd1e54092ea534e84e719995d}{melange\+Paquet}} (struct \mbox{\hyperlink{structsCarte}{s\+Carte}} $\ast$Paquet)
+\begin{DoxyCompactList}\small\item\em Mélange le paquet de cartes aléatoirement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{BlackJack_8h_a2cb61447992901173df6e3a2f68ce101}{creation\+Joueur}} (struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$participant, int nb\+\_\+joueur)
+\begin{DoxyCompactList}\small\item\em Crée les joueurs en demandant leur nom et leur argent qui est pret à jouer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{BlackJack_8h_a97c7e238f1fd49c3778f76d0411e0fe1}{demande\+Mise}} (struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$participant, int nb\+\_\+joueur)
+\begin{DoxyCompactList}\small\item\em Demande la mise de chaque joueur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{BlackJack_8h_a8ed91b32cdea0d40166c65b0845c508d}{tirage\+P\+Carte}} (struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$participant, struct \mbox{\hyperlink{structCroupier}{Croupier}} $\ast$\mbox{\hyperlink{structCroupier}{Croupier}}, struct \mbox{\hyperlink{structsCarte}{s\+Carte}} $\ast$Paquet, int nb\+\_\+joueur, int pos\+Paquet)
+\begin{DoxyCompactList}\small\item\em Tirage des 2 premières cartes de chaque joueur et du croupier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{BlackJack_8h_a6ae74f3c43dbbbe733d2e4fe6c04c07e}{affichagetour\+Joueur}} (struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$participant, int joueur, struct \mbox{\hyperlink{structCroupier}{Croupier}} $\ast$\mbox{\hyperlink{structCroupier}{Croupier}})
+\begin{DoxyCompactList}\small\item\em Affiche la main du croupier avec sa deuxième carte face cachée et affiche la main du joueur qui doit jouer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{BlackJack_8h_adcf36d2f9d6b7d943047e115c63a3758}{demande\+Assurance}} (struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$participant, int nb\+\_\+joueur, struct \mbox{\hyperlink{structCroupier}{Croupier}} $\ast$\mbox{\hyperlink{structCroupier}{Croupier}})
+\begin{DoxyCompactList}\small\item\em Demande si les joueurs veulent une assurance si la première carte du croupier est un As. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{BlackJack_8h_a6f164581c78737123bd8254f0c52f6f8}{tour\+Du\+Joueur}} (struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$participant, int joueur, int pos\+Paquet, struct \mbox{\hyperlink{structsCarte}{s\+Carte}} $\ast$Paquet, struct \mbox{\hyperlink{structCroupier}{Croupier}} $\ast$\mbox{\hyperlink{structCroupier}{Croupier}})
+\begin{DoxyCompactList}\small\item\em Fait jouer un joueur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{BlackJack_8h_a21105ab21e0f9614e62e4ef2bf213947}{tour\+Du\+Croupier}} (int pos\+Paquet, struct \mbox{\hyperlink{structsCarte}{s\+Carte}} $\ast$Paquet, struct \mbox{\hyperlink{structCroupier}{Croupier}} $\ast$\mbox{\hyperlink{structCroupier}{Croupier}})
+\begin{DoxyCompactList}\small\item\em Fait jouer le \mbox{\hyperlink{structCroupier}{Croupier}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{BlackJack_8h_a695fe954b11ef42ddf044a25b363a9c4}{resultat}} (struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$participant, struct \mbox{\hyperlink{structCroupier}{Croupier}} $\ast$\mbox{\hyperlink{structCroupier}{Croupier}}, int nb\+\_\+joueur)
+\begin{DoxyCompactList}\small\item\em Compare le score de chaque joueur avec celui du \mbox{\hyperlink{structCroupier}{Croupier}} et dit si gagné, perdu, égalité, Black\+Jack. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{BlackJack_8h_a8259f3c170adc84e88c7b5404395c1f2}{gains}} (struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$participant, int nb\+\_\+joueur, struct \mbox{\hyperlink{structCroupier}{Croupier}} $\ast$\mbox{\hyperlink{structCroupier}{Croupier}})
+\begin{DoxyCompactList}\small\item\em Distribue les gains aux joueurs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{BlackJack_8h_a7acdd6dc7d4acbefaf29f5d2a8bba81c}{affiche\+Fin\+Tour}} (struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$participant, int nb\+\_\+joueur, struct \mbox{\hyperlink{structCroupier}{Croupier}} $\ast$\mbox{\hyperlink{structCroupier}{Croupier}})
+\begin{DoxyCompactList}\small\item\em Affiche la main du \mbox{\hyperlink{structCroupier}{Croupier}} et les mains de tous les joueurs avec leur résultat. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{BlackJack_8h_a2e6d52be0e40388189c39bbedeb11a44}{demande\+Arret}} (struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$participant, int nb\+\_\+joueur)
+\begin{DoxyCompactList}\small\item\em Demande si les joueurs veulent continuer ou bien arrêter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{BlackJack_8h_ad6234daec116e8f2f59e4de77e7f9561}{reinit\+Joueur}} (struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$participant, int nb\+\_\+joueur)
+\begin{DoxyCompactList}\small\item\em Réinitialise tous les joueurs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{BlackJack_8h_a011eb8ca719841f273eab4404de57c83}{reinit\+Croupier}} (struct \mbox{\hyperlink{structCroupier}{Croupier}} $\ast$\mbox{\hyperlink{structCroupier}{Croupier}})
+\begin{DoxyCompactList}\small\item\em Réinitialise le \mbox{\hyperlink{structCroupier}{Croupier}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{BlackJack_8h_a3efd3b46f3980d01061946cea8cf1d94}{Black\+Jack}} (int nb\+\_\+joueur)
+\begin{DoxyCompactList}\small\item\em Fait tourné le jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Prototypes des fonction pour le black\+Jack. 
+
+\begin{DoxyAuthor}{Author}
+Tarchaud 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+11/12/2021 
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+None 
+\end{DoxyRemark}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{BlackJack_8h_a08389a9632343c4027b474f3ce4d8080}\label{BlackJack_8h_a08389a9632343c4027b474f3ce4d8080}} 
+\index{BlackJack.h@{BlackJack.h}!aGagner@{aGagner}}
+\index{aGagner@{aGagner}!BlackJack.h@{BlackJack.h}}
+\doxysubsubsection{\texorpdfstring{aGagner}{aGagner}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{BlackJack_8h_a08389a9632343c4027b474f3ce4d8080}{a\+Gagner}}}
+
+Enumération pour les résulats possibles \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{perdu@{perdu}!BlackJack.h@{BlackJack.h}}\index{BlackJack.h@{BlackJack.h}!perdu@{perdu}}}\mbox{\Hypertarget{BlackJack_8h_a08389a9632343c4027b474f3ce4d8080adf399991a2ded168c0cfa427179aa14a}\label{BlackJack_8h_a08389a9632343c4027b474f3ce4d8080adf399991a2ded168c0cfa427179aa14a}} 
+perdu&Résultat \+: Perdu \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{egalite@{egalite}!BlackJack.h@{BlackJack.h}}\index{BlackJack.h@{BlackJack.h}!egalite@{egalite}}}\mbox{\Hypertarget{BlackJack_8h_a08389a9632343c4027b474f3ce4d8080aa533d4f9d075573c486ca56d89d961b2}\label{BlackJack_8h_a08389a9632343c4027b474f3ce4d8080aa533d4f9d075573c486ca56d89d961b2}} 
+egalite&Résultat \+: Egalité \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{gagne@{gagne}!BlackJack.h@{BlackJack.h}}\index{BlackJack.h@{BlackJack.h}!gagne@{gagne}}}\mbox{\Hypertarget{BlackJack_8h_a08389a9632343c4027b474f3ce4d8080a52471e9ee5ed3dd852df5aab9d751193}\label{BlackJack_8h_a08389a9632343c4027b474f3ce4d8080a52471e9ee5ed3dd852df5aab9d751193}} 
+gagne&Résultat \+: Gagné \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{blackJack@{blackJack}!BlackJack.h@{BlackJack.h}}\index{BlackJack.h@{BlackJack.h}!blackJack@{blackJack}}}\mbox{\Hypertarget{BlackJack_8h_a08389a9632343c4027b474f3ce4d8080a67cc6ef6254e22c66343c696db1d090d}\label{BlackJack_8h_a08389a9632343c4027b474f3ce4d8080a67cc6ef6254e22c66343c696db1d090d}} 
+black\+Jack&Résultat \+: Black\+Jack \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{BlackJack_8h_a093eda26f46d48ba6b7cfdc988c5bb9f}\label{BlackJack_8h_a093eda26f46d48ba6b7cfdc988c5bb9f}} 
+\index{BlackJack.h@{BlackJack.h}!eCouleur@{eCouleur}}
+\index{eCouleur@{eCouleur}!BlackJack.h@{BlackJack.h}}
+\doxysubsubsection{\texorpdfstring{eCouleur}{eCouleur}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{BlackJack_8h_a093eda26f46d48ba6b7cfdc988c5bb9f}{e\+Couleur}}}
+
+Inclusion des entetes de librairies
+
+Enumération pour les couleurs des cartes \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Carreau@{Carreau}!BlackJack.h@{BlackJack.h}}\index{BlackJack.h@{BlackJack.h}!Carreau@{Carreau}}}\mbox{\Hypertarget{BlackJack_8h_a093eda26f46d48ba6b7cfdc988c5bb9fa6cf34ba95f90ef6ff0cb4b7788b099f6}\label{BlackJack_8h_a093eda26f46d48ba6b7cfdc988c5bb9fa6cf34ba95f90ef6ff0cb4b7788b099f6}} 
+Carreau&Couleur Carreau \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Coeur@{Coeur}!BlackJack.h@{BlackJack.h}}\index{BlackJack.h@{BlackJack.h}!Coeur@{Coeur}}}\mbox{\Hypertarget{BlackJack_8h_a093eda26f46d48ba6b7cfdc988c5bb9fadf14e5391bb2eba0f2b08317cc474d63}\label{BlackJack_8h_a093eda26f46d48ba6b7cfdc988c5bb9fadf14e5391bb2eba0f2b08317cc474d63}} 
+Coeur&Couleur Coeur \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Pique@{Pique}!BlackJack.h@{BlackJack.h}}\index{BlackJack.h@{BlackJack.h}!Pique@{Pique}}}\mbox{\Hypertarget{BlackJack_8h_a093eda26f46d48ba6b7cfdc988c5bb9fa54708678db4f087fe8241fbddd258cb9}\label{BlackJack_8h_a093eda26f46d48ba6b7cfdc988c5bb9fa54708678db4f087fe8241fbddd258cb9}} 
+Pique&Couleur Pique \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Trefle@{Trefle}!BlackJack.h@{BlackJack.h}}\index{BlackJack.h@{BlackJack.h}!Trefle@{Trefle}}}\mbox{\Hypertarget{BlackJack_8h_a093eda26f46d48ba6b7cfdc988c5bb9fa109cc0d64e86ea9eef73f11a55c63a6d}\label{BlackJack_8h_a093eda26f46d48ba6b7cfdc988c5bb9fa109cc0d64e86ea9eef73f11a55c63a6d}} 
+Trefle&Couleur Trefle \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{BlackJack_8h_a6ae74f3c43dbbbe733d2e4fe6c04c07e}\label{BlackJack_8h_a6ae74f3c43dbbbe733d2e4fe6c04c07e}} 
+\index{BlackJack.h@{BlackJack.h}!affichagetourJoueur@{affichagetourJoueur}}
+\index{affichagetourJoueur@{affichagetourJoueur}!BlackJack.h@{BlackJack.h}}
+\doxysubsubsection{\texorpdfstring{affichagetourJoueur()}{affichagetourJoueur()}}
+{\footnotesize\ttfamily void affichagetour\+Joueur (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$}]{participant,  }\item[{int}]{joueur,  }\item[{struct \mbox{\hyperlink{structCroupier}{Croupier}} $\ast$}]{Croupier }\end{DoxyParamCaption})}
+
+
+
+Affiche la main du croupier avec sa deuxième carte face cachée et affiche la main du joueur qui doit jouer. 
+
+\begin{DoxyAuthor}{Author}
+Tarchaud 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19/12/2021 
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+None 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em participant} & tableau de struct \mbox{\hyperlink{structJoueur}{Joueur}} \\
+\hline
+{\em joueur} & indice du joueur à qui c\textquotesingle{}est son tour \\
+\hline
+{\em \mbox{\hyperlink{structCroupier}{Croupier}}} & struct du \mbox{\hyperlink{structCroupier}{Croupier}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{BlackJack_8h_a7acdd6dc7d4acbefaf29f5d2a8bba81c}\label{BlackJack_8h_a7acdd6dc7d4acbefaf29f5d2a8bba81c}} 
+\index{BlackJack.h@{BlackJack.h}!afficheFinTour@{afficheFinTour}}
+\index{afficheFinTour@{afficheFinTour}!BlackJack.h@{BlackJack.h}}
+\doxysubsubsection{\texorpdfstring{afficheFinTour()}{afficheFinTour()}}
+{\footnotesize\ttfamily void affiche\+Fin\+Tour (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$}]{participant,  }\item[{int}]{nb\+\_\+joueur,  }\item[{struct \mbox{\hyperlink{structCroupier}{Croupier}} $\ast$}]{Croupier }\end{DoxyParamCaption})}
+
+
+
+Affiche la main du \mbox{\hyperlink{structCroupier}{Croupier}} et les mains de tous les joueurs avec leur résultat. 
+
+\begin{DoxyAuthor}{Author}
+Tarchaud 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19/12/2021 
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+None 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em participant} & tableau de struct \mbox{\hyperlink{structJoueur}{Joueur}} \\
+\hline
+{\em nb\+\_\+joueur} & nombre de joueur qui jouent \\
+\hline
+{\em \mbox{\hyperlink{structCroupier}{Croupier}}} & struct du \mbox{\hyperlink{structCroupier}{Croupier}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{BlackJack_8h_a3efd3b46f3980d01061946cea8cf1d94}\label{BlackJack_8h_a3efd3b46f3980d01061946cea8cf1d94}} 
+\index{BlackJack.h@{BlackJack.h}!BlackJack@{BlackJack}}
+\index{BlackJack@{BlackJack}!BlackJack.h@{BlackJack.h}}
+\doxysubsubsection{\texorpdfstring{BlackJack()}{BlackJack()}}
+{\footnotesize\ttfamily void Black\+Jack (\begin{DoxyParamCaption}\item[{int}]{nb\+\_\+joueur }\end{DoxyParamCaption})}
+
+
+
+Fait tourné le jeu. 
+
+\begin{DoxyAuthor}{Author}
+Tarchaud 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19/12/2021 
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+None 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em nb\+\_\+joueur} & nombre de joueur qui jouent \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{BlackJack_8h_a2cb61447992901173df6e3a2f68ce101}\label{BlackJack_8h_a2cb61447992901173df6e3a2f68ce101}} 
+\index{BlackJack.h@{BlackJack.h}!creationJoueur@{creationJoueur}}
+\index{creationJoueur@{creationJoueur}!BlackJack.h@{BlackJack.h}}
+\doxysubsubsection{\texorpdfstring{creationJoueur()}{creationJoueur()}}
+{\footnotesize\ttfamily void creation\+Joueur (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$}]{participant,  }\item[{int}]{nb\+\_\+joueur }\end{DoxyParamCaption})}
+
+
+
+Crée les joueurs en demandant leur nom et leur argent qui est pret à jouer. 
+
+\begin{DoxyAuthor}{Author}
+Tarchaud 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19/12/2021 
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+None 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em participant} & tableau de struct \mbox{\hyperlink{structJoueur}{Joueur}} \\
+\hline
+{\em nb\+\_\+joueur} & le nombre de joueurs qu\textquotesingle{}il y a \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{BlackJack_8h_a2e6d52be0e40388189c39bbedeb11a44}\label{BlackJack_8h_a2e6d52be0e40388189c39bbedeb11a44}} 
+\index{BlackJack.h@{BlackJack.h}!demandeArret@{demandeArret}}
+\index{demandeArret@{demandeArret}!BlackJack.h@{BlackJack.h}}
+\doxysubsubsection{\texorpdfstring{demandeArret()}{demandeArret()}}
+{\footnotesize\ttfamily int demande\+Arret (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$}]{participant,  }\item[{int}]{nb\+\_\+joueur }\end{DoxyParamCaption})}
+
+
+
+Demande si les joueurs veulent continuer ou bien arrêter. 
+
+\begin{DoxyAuthor}{Author}
+Tarchaud 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19/12/2021 
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+None 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em participant} & tableau de struct \mbox{\hyperlink{structJoueur}{Joueur}} \\
+\hline
+{\em nb\+\_\+joueur} & nombre de joueur qui jouent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+2 s\textquotesingle{}il y a un joueur veut arrêter ou sinon 1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{BlackJack_8h_adcf36d2f9d6b7d943047e115c63a3758}\label{BlackJack_8h_adcf36d2f9d6b7d943047e115c63a3758}} 
+\index{BlackJack.h@{BlackJack.h}!demandeAssurance@{demandeAssurance}}
+\index{demandeAssurance@{demandeAssurance}!BlackJack.h@{BlackJack.h}}
+\doxysubsubsection{\texorpdfstring{demandeAssurance()}{demandeAssurance()}}
+{\footnotesize\ttfamily void demande\+Assurance (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$}]{participant,  }\item[{int}]{nb\+\_\+joueur,  }\item[{struct \mbox{\hyperlink{structCroupier}{Croupier}} $\ast$}]{Croupier }\end{DoxyParamCaption})}
+
+
+
+Demande si les joueurs veulent une assurance si la première carte du croupier est un As. 
+
+\begin{DoxyAuthor}{Author}
+Tarchaud 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19/12/2021 
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+None 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em participant} & tableau de struct \mbox{\hyperlink{structJoueur}{Joueur}} \\
+\hline
+{\em nb\+\_\+joueur} & nombre de joueur qui jouent \\
+\hline
+{\em \mbox{\hyperlink{structCroupier}{Croupier}}} & struct du \mbox{\hyperlink{structCroupier}{Croupier}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{BlackJack_8h_a97c7e238f1fd49c3778f76d0411e0fe1}\label{BlackJack_8h_a97c7e238f1fd49c3778f76d0411e0fe1}} 
+\index{BlackJack.h@{BlackJack.h}!demandeMise@{demandeMise}}
+\index{demandeMise@{demandeMise}!BlackJack.h@{BlackJack.h}}
+\doxysubsubsection{\texorpdfstring{demandeMise()}{demandeMise()}}
+{\footnotesize\ttfamily void demande\+Mise (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$}]{participant,  }\item[{int}]{nb\+\_\+joueur }\end{DoxyParamCaption})}
+
+
+
+Demande la mise de chaque joueur. 
+
+\begin{DoxyAuthor}{Author}
+Tarchaud 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19/12/2021 
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+None 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em participant} & tableau de struct \mbox{\hyperlink{structJoueur}{Joueur}} \\
+\hline
+{\em nb\+\_\+joueur} & le nombre de joueurs qu\textquotesingle{}il y a \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{BlackJack_8h_a8259f3c170adc84e88c7b5404395c1f2}\label{BlackJack_8h_a8259f3c170adc84e88c7b5404395c1f2}} 
+\index{BlackJack.h@{BlackJack.h}!gains@{gains}}
+\index{gains@{gains}!BlackJack.h@{BlackJack.h}}
+\doxysubsubsection{\texorpdfstring{gains()}{gains()}}
+{\footnotesize\ttfamily int gains (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$}]{participant,  }\item[{int}]{nb\+\_\+joueur,  }\item[{struct \mbox{\hyperlink{structCroupier}{Croupier}} $\ast$}]{Croupier }\end{DoxyParamCaption})}
+
+
+
+Distribue les gains aux joueurs. 
+
+\begin{DoxyAuthor}{Author}
+Tarchaud 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19/12/2021 
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+None 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em participant} & tableau de struct \mbox{\hyperlink{structJoueur}{Joueur}} \\
+\hline
+{\em nb\+\_\+joueur} & nombre de joueur qui jouent \\
+\hline
+{\em \mbox{\hyperlink{structCroupier}{Croupier}}} & struct du \mbox{\hyperlink{structCroupier}{Croupier}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 s\textquotesingle{}il y a un joueur à plus d\textquotesingle{}argent sinon 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{BlackJack_8h_af9a90881db88ae4d7ba2766bb5b54c64}\label{BlackJack_8h_af9a90881db88ae4d7ba2766bb5b54c64}} 
+\index{BlackJack.h@{BlackJack.h}!InitPaquet@{InitPaquet}}
+\index{InitPaquet@{InitPaquet}!BlackJack.h@{BlackJack.h}}
+\doxysubsubsection{\texorpdfstring{InitPaquet()}{InitPaquet()}}
+{\footnotesize\ttfamily void Init\+Paquet (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsCarte}{s\+Carte}} $\ast$}]{Paquet }\end{DoxyParamCaption})}
+
+
+
+Crée le paquet de cartes. 
+
+\begin{DoxyAuthor}{Author}
+Tarchaud 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19/12/2021 
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+None 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em Paquet} & tableau de struct \mbox{\hyperlink{structsCarte}{s\+Carte}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{BlackJack_8h_a1fad917fd1e54092ea534e84e719995d}\label{BlackJack_8h_a1fad917fd1e54092ea534e84e719995d}} 
+\index{BlackJack.h@{BlackJack.h}!melangePaquet@{melangePaquet}}
+\index{melangePaquet@{melangePaquet}!BlackJack.h@{BlackJack.h}}
+\doxysubsubsection{\texorpdfstring{melangePaquet()}{melangePaquet()}}
+{\footnotesize\ttfamily void melange\+Paquet (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsCarte}{s\+Carte}} $\ast$}]{Paquet }\end{DoxyParamCaption})}
+
+
+
+Mélange le paquet de cartes aléatoirement. 
+
+\begin{DoxyAuthor}{Author}
+Tarchaud 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19/12/2021 
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+None 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em Paquet} & tableau de struct \mbox{\hyperlink{structsCarte}{s\+Carte}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{BlackJack_8h_a011eb8ca719841f273eab4404de57c83}\label{BlackJack_8h_a011eb8ca719841f273eab4404de57c83}} 
+\index{BlackJack.h@{BlackJack.h}!reinitCroupier@{reinitCroupier}}
+\index{reinitCroupier@{reinitCroupier}!BlackJack.h@{BlackJack.h}}
+\doxysubsubsection{\texorpdfstring{reinitCroupier()}{reinitCroupier()}}
+{\footnotesize\ttfamily void reinit\+Croupier (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structCroupier}{Croupier}} $\ast$}]{Croupier }\end{DoxyParamCaption})}
+
+
+
+Réinitialise le \mbox{\hyperlink{structCroupier}{Croupier}}. 
+
+\begin{DoxyAuthor}{Author}
+Tarchaud 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19/12/2021 
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+None 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{structCroupier}{Croupier}}} & struct du \mbox{\hyperlink{structCroupier}{Croupier}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{BlackJack_8h_ad6234daec116e8f2f59e4de77e7f9561}\label{BlackJack_8h_ad6234daec116e8f2f59e4de77e7f9561}} 
+\index{BlackJack.h@{BlackJack.h}!reinitJoueur@{reinitJoueur}}
+\index{reinitJoueur@{reinitJoueur}!BlackJack.h@{BlackJack.h}}
+\doxysubsubsection{\texorpdfstring{reinitJoueur()}{reinitJoueur()}}
+{\footnotesize\ttfamily void reinit\+Joueur (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$}]{participant,  }\item[{int}]{nb\+\_\+joueur }\end{DoxyParamCaption})}
+
+
+
+Réinitialise tous les joueurs. 
+
+\begin{DoxyAuthor}{Author}
+Tarchaud 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19/12/2021 
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+None 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em participant} & tableau de struct \mbox{\hyperlink{structJoueur}{Joueur}} \\
+\hline
+{\em nb\+\_\+joueur} & nombre de joueur qui jouent \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{BlackJack_8h_a695fe954b11ef42ddf044a25b363a9c4}\label{BlackJack_8h_a695fe954b11ef42ddf044a25b363a9c4}} 
+\index{BlackJack.h@{BlackJack.h}!resultat@{resultat}}
+\index{resultat@{resultat}!BlackJack.h@{BlackJack.h}}
+\doxysubsubsection{\texorpdfstring{resultat()}{resultat()}}
+{\footnotesize\ttfamily void resultat (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$}]{participant,  }\item[{struct \mbox{\hyperlink{structCroupier}{Croupier}} $\ast$}]{Croupier,  }\item[{int}]{nb\+\_\+joueur }\end{DoxyParamCaption})}
+
+
+
+Compare le score de chaque joueur avec celui du \mbox{\hyperlink{structCroupier}{Croupier}} et dit si gagné, perdu, égalité, Black\+Jack. 
+
+\begin{DoxyAuthor}{Author}
+Tarchaud 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19/12/2021 
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+None 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em participant} & tableau de struct \mbox{\hyperlink{structJoueur}{Joueur}} \\
+\hline
+{\em \mbox{\hyperlink{structCroupier}{Croupier}}} & struct du \mbox{\hyperlink{structCroupier}{Croupier}} \\
+\hline
+{\em nb\+\_\+joueur} & nombre de joueur qui jouent \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{BlackJack_8h_a8ed91b32cdea0d40166c65b0845c508d}\label{BlackJack_8h_a8ed91b32cdea0d40166c65b0845c508d}} 
+\index{BlackJack.h@{BlackJack.h}!tiragePCarte@{tiragePCarte}}
+\index{tiragePCarte@{tiragePCarte}!BlackJack.h@{BlackJack.h}}
+\doxysubsubsection{\texorpdfstring{tiragePCarte()}{tiragePCarte()}}
+{\footnotesize\ttfamily void tirage\+P\+Carte (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$}]{participant,  }\item[{struct \mbox{\hyperlink{structCroupier}{Croupier}} $\ast$}]{Croupier,  }\item[{struct \mbox{\hyperlink{structsCarte}{s\+Carte}} $\ast$}]{Paquet,  }\item[{int}]{nb\+\_\+joueur,  }\item[{int}]{pos\+Paquet }\end{DoxyParamCaption})}
+
+
+
+Tirage des 2 premières cartes de chaque joueur et du croupier. 
+
+\begin{DoxyAuthor}{Author}
+Tarchaud 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19/12/2021 
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+None 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em participant} & tableau de struct \mbox{\hyperlink{structJoueur}{Joueur}} \\
+\hline
+{\em \mbox{\hyperlink{structCroupier}{Croupier}}} & struct du \mbox{\hyperlink{structCroupier}{Croupier}} \\
+\hline
+{\em Paquet} & tableau de struct \mbox{\hyperlink{structsCarte}{s\+Carte}} \\
+\hline
+{\em nb\+\_\+joueur} & le nombre de joueurs qu\textquotesingle{}il y a \\
+\hline
+{\em pos\+Paquet} & la position de la carte qu\textquotesingle{}il faut tirer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{BlackJack_8h_a21105ab21e0f9614e62e4ef2bf213947}\label{BlackJack_8h_a21105ab21e0f9614e62e4ef2bf213947}} 
+\index{BlackJack.h@{BlackJack.h}!tourDuCroupier@{tourDuCroupier}}
+\index{tourDuCroupier@{tourDuCroupier}!BlackJack.h@{BlackJack.h}}
+\doxysubsubsection{\texorpdfstring{tourDuCroupier()}{tourDuCroupier()}}
+{\footnotesize\ttfamily void tour\+Du\+Croupier (\begin{DoxyParamCaption}\item[{int}]{pos\+Paquet,  }\item[{struct \mbox{\hyperlink{structsCarte}{s\+Carte}} $\ast$}]{Paquet,  }\item[{struct \mbox{\hyperlink{structCroupier}{Croupier}} $\ast$}]{Croupier }\end{DoxyParamCaption})}
+
+
+
+Fait jouer le \mbox{\hyperlink{structCroupier}{Croupier}}. 
+
+\begin{DoxyAuthor}{Author}
+Tarchaud 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19/12/2021 
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+None 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em pos\+Paquet} & la position de la carte qu\textquotesingle{}il faut tirer \\
+\hline
+{\em Paquet} & tableau de struct \mbox{\hyperlink{structsCarte}{s\+Carte}} \\
+\hline
+{\em \mbox{\hyperlink{structCroupier}{Croupier}}} & struct du \mbox{\hyperlink{structCroupier}{Croupier}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{BlackJack_8h_a6f164581c78737123bd8254f0c52f6f8}\label{BlackJack_8h_a6f164581c78737123bd8254f0c52f6f8}} 
+\index{BlackJack.h@{BlackJack.h}!tourDuJoueur@{tourDuJoueur}}
+\index{tourDuJoueur@{tourDuJoueur}!BlackJack.h@{BlackJack.h}}
+\doxysubsubsection{\texorpdfstring{tourDuJoueur()}{tourDuJoueur()}}
+{\footnotesize\ttfamily void tour\+Du\+Joueur (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structJoueur}{Joueur}} $\ast$}]{participant,  }\item[{int}]{joueur,  }\item[{int}]{pos\+Paquet,  }\item[{struct \mbox{\hyperlink{structsCarte}{s\+Carte}} $\ast$}]{Paquet,  }\item[{struct \mbox{\hyperlink{structCroupier}{Croupier}} $\ast$}]{Croupier }\end{DoxyParamCaption})}
+
+
+
+Fait jouer un joueur. 
+
+\begin{DoxyAuthor}{Author}
+Tarchaud 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19/12/2021 
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+None 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em participant} & tableau de struct \mbox{\hyperlink{structJoueur}{Joueur}} \\
+\hline
+{\em joueur} & indice du joueur à qui c\textquotesingle{}est son tour \\
+\hline
+{\em pos\+Paquet} & la position de la carte qu\textquotesingle{}il faut tirer \\
+\hline
+{\em Paquet} & tableau de struct \mbox{\hyperlink{structsCarte}{s\+Carte}} \\
+\hline
+{\em \mbox{\hyperlink{structCroupier}{Croupier}}} & struct du \mbox{\hyperlink{structCroupier}{Croupier}} \\
+\hline
+\end{DoxyParams}

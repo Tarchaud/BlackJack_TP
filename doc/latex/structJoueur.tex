@@ -1,0 +1,98 @@
+\hypertarget{structJoueur}{}\doxysection{Joueur Struct Reference}
+\label{structJoueur}\index{Joueur@{Joueur}}
+
+
+{\ttfamily \#include $<$Black\+Jack.\+h$>$}
+
+
+
+Collaboration diagram for Joueur\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{structJoueur__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{structJoueur_a29bb6787b2b6f571439d47d69b2a6996}{nom}} \mbox{[}20\mbox{]}
+\item 
+double \mbox{\hyperlink{structJoueur_ab5f92c975db40d342c72a1bf8879f7d1}{argent}}
+\item 
+double \mbox{\hyperlink{structJoueur_a0a1b023460b8af02ad2beb9f64224529}{mise}}
+\item 
+double \mbox{\hyperlink{structJoueur_ad380433a3eaf0fe45568d83e27918d2d}{assurance}}
+\item 
+struct \mbox{\hyperlink{structsCarte}{s\+Carte}} \mbox{\hyperlink{structJoueur_ae8c2864af2a51afef90f6c68b561054e}{carte}} \mbox{[}10\mbox{]}
+\item 
+int \mbox{\hyperlink{structJoueur_a69d5dadfe695995cb8d5dea939bc8527}{sommecarte}}
+\item 
+int \mbox{\hyperlink{structJoueur_a81e1c01ae4aa110de7e8daec3aab2474}{nb\+Carte}}
+\item 
+enum \mbox{\hyperlink{BlackJack_8h_a08389a9632343c4027b474f3ce4d8080}{a\+Gagner}} \mbox{\hyperlink{structJoueur_a07e8c0e5c8ef185028cbb89ac11179d9}{resultat}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure pour la manipulation d\textquotesingle{}un joueur \begin{DoxyRemark}{Remarks}
+un joueur a un nom, une somme d\textquotesingle{}argent, une mise et sa main 
+\end{DoxyRemark}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structJoueur_ab5f92c975db40d342c72a1bf8879f7d1}\label{structJoueur_ab5f92c975db40d342c72a1bf8879f7d1}} 
+\index{Joueur@{Joueur}!argent@{argent}}
+\index{argent@{argent}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{argent}{argent}}
+{\footnotesize\ttfamily double Joueur\+::argent}
+
+l\textquotesingle{}argent du joueur \mbox{\Hypertarget{structJoueur_ad380433a3eaf0fe45568d83e27918d2d}\label{structJoueur_ad380433a3eaf0fe45568d83e27918d2d}} 
+\index{Joueur@{Joueur}!assurance@{assurance}}
+\index{assurance@{assurance}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{assurance}{assurance}}
+{\footnotesize\ttfamily double Joueur\+::assurance}
+
+l\textquotesingle{}assurance du joueur s\textquotesingle{}il en a besoin \mbox{\Hypertarget{structJoueur_ae8c2864af2a51afef90f6c68b561054e}\label{structJoueur_ae8c2864af2a51afef90f6c68b561054e}} 
+\index{Joueur@{Joueur}!carte@{carte}}
+\index{carte@{carte}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{carte}{carte}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structsCarte}{s\+Carte}} Joueur\+::carte\mbox{[}10\mbox{]}}
+
+La main du joueur \mbox{\Hypertarget{structJoueur_a0a1b023460b8af02ad2beb9f64224529}\label{structJoueur_a0a1b023460b8af02ad2beb9f64224529}} 
+\index{Joueur@{Joueur}!mise@{mise}}
+\index{mise@{mise}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{mise}{mise}}
+{\footnotesize\ttfamily double Joueur\+::mise}
+
+la mise du joueur ~\newline
+ \mbox{\Hypertarget{structJoueur_a81e1c01ae4aa110de7e8daec3aab2474}\label{structJoueur_a81e1c01ae4aa110de7e8daec3aab2474}} 
+\index{Joueur@{Joueur}!nbCarte@{nbCarte}}
+\index{nbCarte@{nbCarte}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{nbCarte}{nbCarte}}
+{\footnotesize\ttfamily int Joueur\+::nb\+Carte}
+
+Nombre de carte que le joueur a \mbox{\Hypertarget{structJoueur_a29bb6787b2b6f571439d47d69b2a6996}\label{structJoueur_a29bb6787b2b6f571439d47d69b2a6996}} 
+\index{Joueur@{Joueur}!nom@{nom}}
+\index{nom@{nom}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{nom}{nom}}
+{\footnotesize\ttfamily char Joueur\+::nom\mbox{[}20\mbox{]}}
+
+Nom du joueur \mbox{\Hypertarget{structJoueur_a07e8c0e5c8ef185028cbb89ac11179d9}\label{structJoueur_a07e8c0e5c8ef185028cbb89ac11179d9}} 
+\index{Joueur@{Joueur}!resultat@{resultat}}
+\index{resultat@{resultat}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{resultat}{resultat}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{BlackJack_8h_a08389a9632343c4027b474f3ce4d8080}{a\+Gagner}} Joueur\+::resultat}
+
+Résultat du joueur \mbox{\Hypertarget{structJoueur_a69d5dadfe695995cb8d5dea939bc8527}\label{structJoueur_a69d5dadfe695995cb8d5dea939bc8527}} 
+\index{Joueur@{Joueur}!sommecarte@{sommecarte}}
+\index{sommecarte@{sommecarte}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{sommecarte}{sommecarte}}
+{\footnotesize\ttfamily int Joueur\+::sommecarte}
+
+La somme des cartes du joueur 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{BlackJack_8h}{Black\+Jack.\+h}}\end{DoxyCompactItemize}
