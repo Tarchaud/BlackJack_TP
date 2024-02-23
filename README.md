@@ -49,6 +49,16 @@ Le projet BlackJack_TP est une implémentation du jeu de cartes BlackJack en lan
 
 La documentation a été générer via Doxygen.
 
+```bash
+# Générer la documentation 
+doxygen -g
+doxygen Doxyfile
+```
+
+## Reste à faire
+
+- cas : le split (séparer les cartes si double en main de départ)  
+
 ## Remarques
 
 - Ce projet a été réalisé dans le cadre d'un travail pratique ou d'un projet académique.
